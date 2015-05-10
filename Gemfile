@@ -12,9 +12,9 @@ source 'https://rubygems.org'
   end
 # END OF RAILS DEFAULTS
 
-  ruby '2.1.2'
+  ruby '2.2.1'
   gem 'pg'
-  gem 'bootstrap-sass', '~> 3.3.1.0'
+  gem 'bootstrap-sass', '~> 3.2.0' # latest version 
   gem 'autoprefixer-rails' # refrenced that this gem should be added with boostrap
   gem 'thin' # for pushing messsages also
   gem 'newrelic_rpm' # keep app from sleeping on heroku
