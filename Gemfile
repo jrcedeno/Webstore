@@ -18,7 +18,7 @@ source 'https://rubygems.org'
   gem 'autoprefixer-rails' # refrenced that this gem should be added with boostrap
   gem 'thin' # for pushing messsages also
   gem 'newrelic_rpm' # keep app from sleeping on heroku
-  gem 'rack-mini-profiler' # for showing speed specs in production and development
+  #gem 'rack-mini-profiler' # for showing speed specs in production and development
   # gem 'flamegraph' # for graphing out speed
   gem 'dalli' # for mechached for quicker views
   gem 'jquery-turbolinks' # to fix turbolinks not loading js
