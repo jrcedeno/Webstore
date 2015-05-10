@@ -2,6 +2,8 @@ class StaticPagesController < ApplicationController
 
 
 def home
-end
+	flash[:error] = "test value"
 	
 end
+
+end 
