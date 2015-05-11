@@ -6,12 +6,19 @@
 		</div>
 		<nav class="top-nav">
 			<ul class="top-nav nav_list">
+			<li class="logo page-scroll"><%= link_to "Home", root_path %></li>
 				<li><a href="portfolio.html">portfolio</a></li>
 				<li class="page-scroll"><a href="#about">About</a></li>
-				<li class="logo page-scroll"><%= link_to "Webstore", root_path %>
+				<li class="logo page-scroll"><%= link_to "", user_session_path %>
                  <%= image_tag("logo.png", :class => "responsive") %></li>
 			    <li class="page-scroll"><a href="blog.html">blog</a></li>
 				<li class="page-scroll"><a href="#contact">get in touch</a></li>
+				<% if current_user %>
+				<li class="logo page-scroll">
+                    <%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                    <li class="logo page-scroll"><%= link_to "Login", user_session_path %></li>
+                <% end %> 
 			</ul>
 			<a href="#" id="pull"><img src="images/nav-icon.png" title="menu"></a>
 		</nav>
