@@ -1,4 +1,4 @@
-class ListingController < ApplicationController
+class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new 
@@ -13,6 +13,8 @@ class ListingController < ApplicationController
 			flash[:error] = @listing.errors.full_messages.first
 			redirect_to new_listing_path
 		end
+         @listing = Listing.create(listing_params)
+
 	end
 
 	def show
@@ -20,7 +22,7 @@ class ListingController < ApplicationController
 	end
 
 	def index
-		@listing = Listing.all
+		@listings = Listing.all
 	end
 
 	def edit
@@ -54,4 +56,5 @@ class ListingController < ApplicationController
 	def listing_params
 		params.require(:listing).permit(:title, :artist, :description, :price, :image)
 	end
+
 end

@@ -5,7 +5,7 @@ Webstore::Application.routes.draw do
 
   # ACTION '/ADDRESS'  =>      'CONTROLLER#METHOD'
 
-resources :listing
+resources :listings
 
 end
 
