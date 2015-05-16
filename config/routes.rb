@@ -5,6 +5,7 @@ Webstore::Application.routes.draw do
 
   # ACTION '/ADDRESS'  =>      'CONTROLLER#METHOD'
 
+get '/portfolio'  =>     'static_pages#portfolio'
 resources :listings
 
 end
