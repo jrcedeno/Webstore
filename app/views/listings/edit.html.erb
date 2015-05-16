@@ -1,0 +1,20 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>EDIT YOUR LIST HERE</h1>
+
+<%= form_for @listing, html: { multipart: true } do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+   <%= f.label :artist %>
+   <%= f.text_field :artist %>
+   <%= f.label :description %>
+   <%= f.text_area  :description %>
+   <%= f.label :price %>
+   <%= f.text_field :price %>
+   <%= f.label :photo %>
+   <%= f.file_field :image %>
+   <%= f.submit "Create" %>
+   <% end %>
